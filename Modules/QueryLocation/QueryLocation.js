@@ -5,7 +5,7 @@ const QueryLocation = async () => {
   const location = searchBar.value;
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=408d0df5f4864527825230212231106&q=${location}`,
+      `http://api.weatherapi.com/v1/forecast.json?key=408d0df5f4864527825230212231106&q=${location}&days=14`,
       { mode: "cors" }
     );
     const data = await response.json();

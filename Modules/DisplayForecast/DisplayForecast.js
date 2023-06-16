@@ -1,13 +1,9 @@
 import BasicChildDiv from "../BasicChildDiv/BasicChildDiv.js";
 
-const DisplayForecast = (fore) => {
-  const forecast = document.getElementById("forecast");
-  BasicChildDiv("temp-c", fore.temp_c, forecast);
-  BasicChildDiv("feelslike-c", fore.feelslike_c, forecast);
-  BasicChildDiv("wind", fore.wind_kph, forecast);
-  BasicChildDiv("humidity", fore.humidity, forecast);
-  BasicChildDiv("condition", fore.condition.text, forecast);
-  BasicChildDiv("visibility", fore.vis_km, forecast);
+const DisplayForecast = (forecast) => {
+  console.log(forecast);
+  const future = document.getElementById("forecast");
+  BasicChildDiv("day1", forecast.forecastday[0].day.avgtemp_c, future);
 };
 
 export default DisplayForecast;
