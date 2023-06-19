@@ -1,0 +1,15 @@
+#city {
+  margin: 15px;
+  font-size: 2rem;
+}
+
+#country {
+  margin: 20px;
+  margin-left: 35px;
+  font-size: 1.2rem;
+}
+
+#local-time {
+  margin: 20px;
+  margin-left: 35px;
+}

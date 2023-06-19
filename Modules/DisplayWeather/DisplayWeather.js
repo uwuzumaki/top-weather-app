@@ -3,29 +3,30 @@ import DisplayCurrent from "../DisplayCurrent/DisplayCurrent.js";
 import DisplayForecast from "../DisplayForecast/DisplayForecast.js";
 
 const DisplayWeather = (data) => {
-  const container = document.getElementById("container");
+  const container = document.getElementById("main");
   const location = data.location;
   const current = data.current;
   const future = data.forecast;
 
-  const oldWeather = document.getElementById("weather");
+  const oldWeather = document.getElementById("place");
   if (oldWeather) {
     oldWeather.remove();
   }
 
-  const main = document.createElement("div");
-  main.id = "weather";
-  container.appendChild(main);
+  const oldWeather2 = document.getElementById("forecast");
+  if (oldWeather2) {
+    oldWeather2.remove();
+  }
 
   const place = document.createElement("div");
   place.id = "place";
-  main.appendChild(place);
+  container.appendChild(place);
   DisplayLocation(location);
   DisplayCurrent(current);
 
   const forecast = document.createElement("div");
   forecast.id = "forecast";
-  main.appendChild(forecast);
+  container.appendChild(forecast);
   DisplayForecast(future);
 };
 

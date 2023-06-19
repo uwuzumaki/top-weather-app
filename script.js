@@ -1,4 +1,5 @@
 import queryLocation from "./Modules/QueryLocation/QueryLocation.js";
+import Footer from "./Modules/Footer/Footer.js";
 
 const searchBarButton = document.getElementById("search-bar-button");
 searchBarButton.addEventListener("click", queryLocation);
@@ -8,3 +9,10 @@ searchBar.addEventListener("keypress", (e) => {
     queryLocation();
   }
 });
+
+const container = document.getElementById("container");
+const main = document.createElement("div");
+main.id = "main";
+container.appendChild(main);
+
+Footer();

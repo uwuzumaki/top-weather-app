@@ -9,3 +9,5 @@ Simply search for the city of your choice and the weather API will return the ci
 ## Issues
 
 The API key for the weather app is stored inside the javascript. The lesson specified not to worry about it as it will be solved in future lessons.
+
+As this project doesn't use a bundler like webpack, I linked the stylesheets separately in the html rather than importing it.
